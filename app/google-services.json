@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "651520131733",
+    "firebase_url": "https://fixmtgaexport-default-rtdb.firebaseio.com",
+    "project_id": "fixmtgaexport",
+    "storage_bucket": "fixmtgaexport.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651520131733:android:ada8df59d898bd7e05919c",
+        "android_client_info": {
+          "package_name": "com.dionigi.fixmtgaexport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651520131733-fl8ih0g0qrmb8cqlkt1sli2b9mt7916h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGqV-dQypmHlHUZFL9us_drzynSRgvyAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651520131733-fl8ih0g0qrmb8cqlkt1sli2b9mt7916h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
