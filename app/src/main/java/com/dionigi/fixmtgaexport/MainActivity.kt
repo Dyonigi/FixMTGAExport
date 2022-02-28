@@ -22,33 +22,22 @@ class MainActivity : AppCompatActivity() {
         val fix = findViewById<Button>(R.id.fix)
         val fixedlist = findViewById<TextView>(R.id.fixedlist)
         database = Firebase.database.reference
-        val cardListener = object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                // Get Post object and use the values to update the UI
-                val post = dataSnapshot.value
-                // ...
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                val post = ""
-            }
-        }
-        database.addListenerForSingleValueEvent(cardListener)
 
         fix.setOnClickListener {
             val textinput = findViewById<TextInputEditText>(R.id.input)
             val input = textinput.text.toString().lines()
-            var list = ""
-            input.forEach {
-                var remainingName = ""
-                database.child(it).get().addOnSuccessListener{
-                    remainingName = it.get().toString()
+            fixedlist.text = ""
+            input.forEach { card ->
+                database.child(card).get().addOnSuccessListener{ secondName ->
+                    if(secondName.exists()){
+                        fixedlist.text = fixedlist.text.toString() + card + secondName.value.toString() + "\n"
+                    }else{
+                        fixedlist.text = fixedlist.text.toString() + card + "\n"
+                    }
                 }.addOnFailureListener{
-                    remainingName = ""
+                    fixedlist.text = fixedlist.text.toString() + card + "\n"
                 }
-                list = list + "\n" + it
             }
-            fixedlist.text = list
 
 
 
