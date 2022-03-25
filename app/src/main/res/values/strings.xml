@@ -2,4 +2,5 @@
     <string name="app_name">FixMTGAExport</string>
     <string name="fix">Fix</string>
     <string name="input">Paste your deck list here</string>
+    <string name="output">Fixed list will be shown here</string>
 </resources>
